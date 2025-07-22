@@ -18,13 +18,16 @@ The goal of this project is to:
 
 ## 💻 Files Included
 
-| File                  | Description                                      |
-|-----------------------|--------------------------------------------------|
-| `uart_tx.v`           | UART transmitter module (8N1 format)             |
-| `seg7_decoder.v`      | 7-segment display decoder (active-high)          |
-| `top_module.v`        | Top-level integration (switches, UART, display)  |
-| `testbench.v`         | Simulation testbench for functional testing      |
-| `README.md`           | Project documentation                            |
+| File                         | Description                                                                 |
+|------------------------------|-----------------------------------------------------------------------------|
+| `uart_tx.v`                  | UART **Transmitter** module, sends 8-bit data serially at 115200 baud rate |
+| `uart_rx.v`                  | UART **Receiver** module, receives 8-bit serial data                        |
+| `seg7_decoder.v`             | **7-Segment Decoder** (active-high) that displays 4-bit input in hex format |
+| `invert_uart_transceiver.v` | **Top module** integrating TX, RX, switch input, and 7-segment output       |
+| `invert_uart_transceiver_test.v` | **Testbench** to simulate and verify the full design behavior         |
+
+---
+
 
 ## 🧠 Technologies Used
 
