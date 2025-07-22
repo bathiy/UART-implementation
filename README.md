@@ -32,11 +32,18 @@ The goal of this project is to:
 ## 🧠 Technologies Used
 
 - Verilog HDL
-- Quartus Prime / Vivado (for synthesis)
+- Quartus Prime(for synthesis)
 - ModelSim (for simulation)
-- FPGA Board / Simulation environment
+- FPGA Board(DE0 Nano)
 
 ## ⚙️ How It Works
+
+1. User sets a 4-bit input on switches `SW[3:0]`.
+2. The design concatenates `4'b0000` as upper bits → `8'b0000xxxx`.
+3. The `uart_tx` module sends this 8-bit data serially at 115200 baud.
+4. The 7-segment decoder displays the lower nibble of the transmitted data (i.e., switch input) in hexadecimal format.
+
+
 
 1. User sets a 4-bit input on switches `SW[3:0]`.
 2. The design concatenates `4'b0000` as upper bits → `8'b0000xxxx`.
