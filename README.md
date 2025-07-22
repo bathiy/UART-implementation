@@ -9,6 +9,7 @@ The goal of this project is to:
 - Append 4 leading zero bits to form an 8-bit data word.
 - Send this 8-bit data over UART at 115200 baud rate.
 - Display the received hexadecimal value on a 7-segment display.
+- Transmit a number and reciveback multiply by two
 
 ### Key Features
 - **UART Transmitter** with customizable baud rate.
